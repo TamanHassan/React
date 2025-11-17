@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 function ProjectCard( {
     name,
     screenshot,
@@ -8,11 +10,17 @@ function ProjectCard( {
     role,
     challenges,
 } ) {
+
+    useEffect(() => {
+        document.title = `${name} - react project`;
+    }, [name] );
+
+
     return (
         <div style={styles.card}>
-            <img src="" alt="" />
+            <img src={screenshot} alt={name} style= {styles.image}/>
 
-            <h2>React</h2>
+            <h2>{name}</h2>
             <p><strong> Teach Used:</strong>{tech} </p>
             <p><strong> Description:</strong>{description} </p>
             <p><strong> What You Learned:</strong>{whatYouLearned} </p>
