@@ -1,11 +1,12 @@
-import React from "react";
+import Bitcoin from "../components/Bitcoin.jsx";
 
-function Api() {
+export default function Api () {
     return (
         <div>
-            <h1>API /h1>
-
+            <h1>Api</h1>
+            <Bitcoin />
         </div>
     );
 }
-export default Api;
+
+
